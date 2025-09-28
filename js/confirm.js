@@ -7,7 +7,7 @@ const statusEl = document.getElementById('status');
 if (!token) {
   statusEl.textContent = "❌ Token ausente ou inválido.";
 } else {
-  fetch(`https://api.upalug.com.br/auth/confirm-email/${token}`)
+  fetch(`https://api.upalug.com.br/authentication/confirm-email/${token}`)
   .then(async response => {
     const data = await response.json();
     if (response.ok) {
@@ -22,3 +22,4 @@ if (!token) {
   });
 
 }
+
